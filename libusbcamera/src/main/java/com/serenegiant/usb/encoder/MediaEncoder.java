@@ -6,7 +6,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
 
-import com.jiangdg.usbcamera.utils.FileUtils;
+import com.pensieve.camera.utils.FileUtils;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;

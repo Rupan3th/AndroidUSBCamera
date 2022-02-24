@@ -373,7 +373,7 @@ public abstract class AbstractUVCCameraHandler extends Handler {
 //                thread.handleStillPicture((String) msg.obj);
                 break;
             case MSG_CAPTURE_START:
-//			      thread.handleStartRecording((String)msg.obj);
+//			      thread.handleStartRecording2((String)msg.obj);
                 thread.handleStartPusher((RecordParams) msg.obj);
                 break;
             case MSG_CAPTURE_STOP:
@@ -672,10 +672,9 @@ public abstract class AbstractUVCCameraHandler extends Handler {
         public void handleStartPusher(RecordParams params) {
             if ((mUVCCamera == null) || (mH264Consumer != null))
                 return;
-//			// 获取USB Camera预览数据
+//			// Get USB Camera Privew Data
 //			mUVCCamera.setFrameCallback(mIFrameCallback, UVCCamera.PIXEL_FORMAT_NV21);
 
-            // 初始化混合器
             if (params != null) {
                 isSupportOverlay = params.isSupportOverlay();
                 if(isSupportOverlay) {

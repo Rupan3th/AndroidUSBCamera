@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jiangdg.usbcamera">
+    package="com.pensieve.camera">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -11,34 +11,37 @@
     <uses-feature android:name="android.hardware.usb.host" />
 
     <application
-        android:name=".application.MyApplication"
+        android:name="com.pensieve.camera.application.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.DynamicGalleryActivity"
+            android:name="com.pensieve.camera.view.DynamicGalleryActivity"
             android:screenOrientation="landscape"
             android:exported="false" />
         <activity
-            android:name=".view.VideoPlayActivity"
+            android:name="com.pensieve.camera.view.VideoPlayActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.ImageDetailActivity"
-            android:exported="false" />
+            android:name="com.pensieve.camera.view.ImageDetailActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+
         <activity
-            android:name=".view.SplashActivity"
-            android:screenOrientation="portrait">
+            android:name="com.pensieve.camera.view.SplashActivity"
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".view.USBCameraActivity"
+            android:name="com.pensieve.camera.view.USBCameraActivity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

@@ -53,7 +53,7 @@ public class AACEncodeConsumer extends Thread{
     private MediaFormat newFormat;
 
     private static final int[] AUDIO_SOURCES = new int[] {
-            MediaRecorder.AudioSource.DEFAULT,
+//            MediaRecorder.AudioSource.DEFAULT,
             MediaRecorder.AudioSource.MIC,
             MediaRecorder.AudioSource.CAMCORDER,
     };
